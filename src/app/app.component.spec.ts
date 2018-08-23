@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { CoinSelectionComponent } from './coin-selection/coin-selection.component';
 import { FormsModule } from '@angular/forms';
+import { WalletBalanceComponent } from './wallet-balance/wallet-balance.component';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -11,7 +12,8 @@ describe('AppComponent', () => {
         AppComponent,
         NavbarComponent,
         ContentComponent,
-        CoinSelectionComponent 
+        CoinSelectionComponent,
+        WalletBalanceComponent
       ],
       imports:[
         FormsModule

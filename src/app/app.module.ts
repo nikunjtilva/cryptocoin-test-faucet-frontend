@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
@@ -8,7 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContentComponent } from './content/content.component';
 import { CoinSelectionComponent } from './coin-selection/coin-selection.component';
 import { WalletBalanceComponent } from './wallet-balance/wallet-balance.component';
-import { HttpService } from './http.service';
+import { HttpService } from './providers/http.service';
+import { WalletServiceService } from './providers/wallet-service.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,9 @@ import { HttpService } from './http.service';
     BrowserModule,
     NgbModule,
     FormsModule,
-    HttpModule
+    HttpClientModule
   ],
-  providers: [HttpService],
+  providers: [HttpService,HttpClient,WalletServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

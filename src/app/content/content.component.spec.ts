@@ -4,6 +4,7 @@ import { ContentComponent } from './content.component';
 import { CoinSelectionComponent } from '../coin-selection/coin-selection.component';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { WalletBalanceComponent } from '../wallet-balance/wallet-balance.component';
 
 describe('ContentComponent', () => {
   let component: ContentComponent;
@@ -11,11 +12,13 @@ describe('ContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ContentComponent,
-      CoinSelectionComponent ],
-      imports:[FormsModule,NgbModule]
+      declarations: [
+        ContentComponent,
+        CoinSelectionComponent,
+        WalletBalanceComponent],
+      imports: [FormsModule, NgbModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

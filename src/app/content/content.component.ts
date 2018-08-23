@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-
+  coinType = 'tltc';
   constructor() { }
 
   ngOnInit() {
   }
 
   coinChanged = (value) => {
+    console.log("coinchanged",value);
+    this.coinType = value;
   }
 }
