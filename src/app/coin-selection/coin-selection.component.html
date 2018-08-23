@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col d-flex justify-items-center">
+    <div class="btn-group btn-group-toggle " ngbRadioGroup name="radioBasic" [(ngModel)]="coin">
+      <label ngbButtonLabel class="btn-lg" [ngClass]="{'btn-primary': coin ==='bitcoin', 'btn-light':coin!=='bitcoin'}">
+        <input ngbButton type="radio" value="bitcoin"> Bitcoin
+      </label>
+      <label ngbButtonLabel class="btn-lg" [ngClass]="{'btn-primary': coin ==='litecoin', 'btn-light':coin!=='litecoin'}">
+        <input ngbButton type="radio" value="litecoin"> Litecoin
+      </label>
+    </div>
+  </div>
+</div>
