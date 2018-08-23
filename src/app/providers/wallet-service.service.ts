@@ -11,6 +11,6 @@ export class WalletServiceService {
   constructor(private httpService:HttpService) { }
 
   public getBalance(coinType):Observable<any>{
-    return this.httpService.get(`${environment.API_GATEWAY}${environment.WALLET_BALANCE_API}/${coinType}`)
+    return this.httpService.get(`${environment.API_GATEWAY}${environment.WALLET_BALANCE_API}${coinType}`)
   }
 }

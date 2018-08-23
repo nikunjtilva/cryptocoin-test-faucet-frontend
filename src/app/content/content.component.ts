@@ -13,6 +13,7 @@ export class ContentComponent implements OnInit {
   }
 
   coinChanged = (value) => {
+    console.log("coinchanged",value);
     this.coinType = value;
   }
 }

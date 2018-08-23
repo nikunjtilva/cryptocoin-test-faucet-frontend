@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-coin-selection',
   templateUrl: './coin-selection.component.html',
   styleUrls: ['./coin-selection.component.css']
 })
-export class CoinSelectionComponent implements OnInit {
+export class CoinSelectionComponent implements OnInit,OnChanges {
 
   @Input() coin='tbtc';
   @Output() coinChange = new EventEmitter<string>();  
