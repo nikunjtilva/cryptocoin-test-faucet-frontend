@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  API_GATEWAY:'https://pj24x5tb2a.execute-api.us-east-1.amazonaws.com/dev/',
+  WALLET_BALANCE_API:'balance/',
+  SEND_COIN_API:'sendcoin/'
 };
 
 /*

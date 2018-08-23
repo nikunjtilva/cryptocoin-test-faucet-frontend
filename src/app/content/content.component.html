@@ -2,7 +2,9 @@
   <div class="col-8">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-       <app-coin-selection coin='litecoin' (coinChange)="coinChanged($event)"></app-coin-selection>
+       <app-coin-selection coin='tltc' (coinChange)="coinChanged($event)"></app-coin-selection>
+       {{coinType}}
+       <app-wallet-balance [coinType]=coinType></app-wallet-balance>
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class CoinSelectionComponent implements OnInit {
 
-  @Input() coin='bitcoin';
+  @Input() coin='tbtc';
   @Output() coinChange = new EventEmitter<string>();  
   constructor() { }
 
