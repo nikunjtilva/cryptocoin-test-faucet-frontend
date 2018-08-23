@@ -10,6 +10,7 @@ export class TransactionComponent implements OnInit, OnChanges {
   @Input() coinType = 'tltc';
   walletAddress = '';
   amount = '';
+  message = ''
   constructor(private walletService:WalletServiceService) { }
 
   ngOnInit() {
@@ -17,10 +18,15 @@ export class TransactionComponent implements OnInit, OnChanges {
 
   ngOnChanges(change:SimpleChanges){
     this.coinType = change.coinType.isFirstChange() ? change.coinType.currentValue:change.coinType.previousValue;
+    this.message = ''
   }
 
   requestCoin(){
-    console.log(this.walletAddress,this.amount);
+    this.walletService.requestCoin(this.coinType,this.walletAddress,this.amount).subscribe((success)=>{
+      this.message= 'Transaction Successful';
+    },(error)=>{
+      this.message =error.error.name;// JSON.stringify(error.error);
+    });
   }
 
 }
