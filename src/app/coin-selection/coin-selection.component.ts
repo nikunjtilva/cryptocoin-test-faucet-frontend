@@ -15,7 +15,7 @@ export class CoinSelectionComponent implements OnInit {
   }
 
   changeValue = (value) =>{
-    this.coinChange.emit(value);
+    this.coinChange.emit(this.coin);
   }
 
 }

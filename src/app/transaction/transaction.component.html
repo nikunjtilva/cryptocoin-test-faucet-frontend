@@ -1,0 +1,31 @@
+
+<div class="row">
+  <div class="col-8 d-flex justify-items-center">
+  <div class="input-group input-group-lg">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-lg">Wallet Address</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="walletAddress">
+  </div>
+  </div>
+  <div class="col-4 d-flex justify-items-center">
+      <div class="input-group input-group-lg">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-lg">Amount</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="amount">
+      </div>
+      </div>
+</div>
+
+<div class="row">
+    <div class="col-12 d-flex justify-items-center p-3">
+        <button type="button" class="btn btn-outline-success btn-lg" (click)="requestCoin()">Request Coin</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 d-flex justify-items-center p-3">
+        <h6>{{message}}</h6>
+    </div>
+</div>

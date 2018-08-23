@@ -10,6 +10,7 @@ import { CoinSelectionComponent } from './coin-selection/coin-selection.componen
 import { WalletBalanceComponent } from './wallet-balance/wallet-balance.component';
 import { HttpService } from './providers/http.service';
 import { WalletServiceService } from './providers/wallet-service.service';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WalletServiceService } from './providers/wallet-service.service';
     NavbarComponent,
     ContentComponent,
     CoinSelectionComponent,
-    WalletBalanceComponent
+    WalletBalanceComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,
