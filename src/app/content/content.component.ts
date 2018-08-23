@@ -12,4 +12,6 @@ export class ContentComponent implements OnInit {
   ngOnInit() {
   }
 
+  coinChanged = (value) => {
+  }
 }

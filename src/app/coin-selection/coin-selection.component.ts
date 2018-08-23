@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-coin-selection',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coin-selection.component.css']
 })
 export class CoinSelectionComponent implements OnInit {
-  coin='bitcoin';
+
+  @Input() coin='bitcoin';
+  @Output() coinChange = new EventEmitter<string>();  
   constructor() { }
 
   ngOnInit() {
+  }
+
+  changeValue = (value) =>{
+    this.coinChange.emit(value);
   }
 
 }
