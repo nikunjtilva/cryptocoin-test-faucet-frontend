@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ContentComponent } from './content.component';
 import { CoinSelectionComponent } from '../coin-selection/coin-selection.component';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('ContentComponent', () => {
   let component: ContentComponent;
@@ -10,7 +12,8 @@ describe('ContentComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ContentComponent,
-      CoinSelectionComponent ]
+      CoinSelectionComponent ],
+      imports:[FormsModule,NgbModule]
     })
     .compileComponents();
   }));
